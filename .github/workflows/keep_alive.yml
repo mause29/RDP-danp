@@ -2,6 +2,7 @@ name: Keep Codespace Alive
 on:
   schedule:
     - cron: "*/15 * * * *"  # Se ejecuta cada 15 minutos
+    workflow_dispatch:  # Permite ejecutarlo manualmente
 jobs:
   keep-alive:
     runs-on: ubuntu-latest
