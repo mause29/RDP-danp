@@ -1,0 +1,10 @@
+name: Keep Codespace Alive
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # Se ejecuta cada 15 minutos
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Codespace
+        run: curl -s -o /dev/null https://github.com/mause29/RDP-danp
